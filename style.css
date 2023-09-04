@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osz-font-smoothing: greyscale;
+
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
