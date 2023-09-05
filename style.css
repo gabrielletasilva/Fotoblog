@@ -4,11 +4,43 @@
     box-sizing: border-box;
 
     -webkit-font-smoothing: antialiased;
-    -moz-osz-font-smoothing: greyscale;
+    -moz-osz-font-smoothing: grayscale;
 
     font-family: 'Mulish', sans-serif;
 }
 
+:root {
+    font-size: 62.5%;
+}
+
+
 body {
+    font-size: 1.6rem;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+}
+
+main {
     background-color: #F5F5F5;
+    overflow-y: scroll;
+}
+
+#app {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    width: min(112rem, 100%);
+    margin: 0 auto;
+}
+
+footer {
+    justify-content: center;
 }
