@@ -6,11 +6,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osz-font-smoothing: grayscale;
 
-    font-family: 'Mulish', sans-serif;
 }
 
 :root {
     font-size: 62.5%;
+    
+    --white: #ffffff;
+    --gray-100:#f5f5f5;
+    --gray-300: #8d8d99;
+    --gray-900: #202024;
+    
+    font-family: 'Mulish', sans-serif;
 }
 
 
@@ -19,14 +25,30 @@ body {
     background-color: white;
 }
 
-header {
+header,
+nav,
+nav ul {
     display: flex;
-    justify-content:space-between;
+    align-items: center;
+    gap: 7.7rem;
+    font-weight: 700;
+}
+
+header form {
+    flex: 1;
 }
 
 main {
     background-color: #F5F5F5;
     overflow-y: scroll;
+}
+
+span {
+    font-weight: 400;
+}
+
+input, footer span {
+    font-weight: 600;
 }
 
 #app {
@@ -41,6 +63,50 @@ main {
     margin: 0 auto;
 }
 
-footer {
-    justify-content: center;
+footer p{
+    text-align: center;
+
+    padding: 1.6rem;
+
+    font-weight: 600;
+}
+
+nav li {
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+    color: var(--gray-300);
+}
+
+ul li.active {
+    color: var(--gray-900);
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem;
+
+    background-color: #EEEEEE;
+    color: #3D3D3D;
+    font-size: 1.6rem;
+    border-radius: .6rem;
+    border: 0;
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
 }
