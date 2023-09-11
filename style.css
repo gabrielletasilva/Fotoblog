@@ -14,6 +14,7 @@
     --white: #ffffff;
     --gray-100:#f5f5f5;
     --gray-300: #8d8d99;
+    --gray-500: #3d3d3d;
     --gray-900: #202024;
     
     font-family: 'Mulish', sans-serif;
@@ -22,7 +23,13 @@
 
 body {
     font-size: 1.6rem;
-    background-color: white;
+    background-color: var(--white);
+}
+
+html,
+body, 
+input {
+    font-family: 'Mulish', sans-serif;
 }
 
 header,
@@ -39,7 +46,7 @@ header form {
 }
 
 main {
-    background-color: #F5F5F5;
+    background-color: var(--gray-100);
     overflow-y: scroll;
 }
 
@@ -63,13 +70,6 @@ input, footer span {
     margin: 0 auto;
 }
 
-footer p{
-    text-align: center;
-
-    padding: 1.6rem;
-
-    font-weight: 600;
-}
 
 nav li {
     display: flex;
@@ -79,6 +79,10 @@ nav li {
 }
 
 ul li.active {
+    color: var(--gray-900);
+}
+
+ul li:hover{
     color: var(--gray-900);
 }
 
@@ -94,19 +98,53 @@ ul li.active {
     align-items: center;
     gap: 1.2rem;
     padding: 1.2rem 1.6rem;
-
-    background-color: #EEEEEE;
+    
+    background-color: var(--gray-100);
     color: #3D3D3D;
     font-size: 1.6rem;
     border-radius: .6rem;
     border: 0;
+    font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+    opacity: 0.56;
+    color: var(--gray-500);
 }
 
 .avatar {
     width: 4.2rem;
     height: 4.2rem;
-
+    
     object-fit: cover;
-
+    
     border-radius: 50%;
+}
+
+/* galeria */
+main h1 {
+    padding-top: 1.6rem;
+    font-size: 2.4rem;
+}
+
+.gallery {
+    margin-top: 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.2rem;
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+footer p{
+    text-align: center;
+
+    padding: 1.6rem;
+
+    font-weight: 600;
 }
