@@ -135,10 +135,37 @@ main h1 {
     gap: 2.2rem;
 }
 
+.item {
+    background-color: var(--white);
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
 .item img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+    border-radius: .8rem;
+
+    /* transition-property: all;
+    transition-duration: 150ms;
+    transition-delay: 0;
+    transition-timing-function: ease-out; */
+
+    transition: all 150ms ease-out;
+}
+
+.item img:hover {
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+    transform: scale(1.1) rotate(-2deg);
+    border-radius: .8rem;
+}
+
+.details {
+    padding: 2.2rem;
+    background-color: var(--white);
+    z-index: 1;
+    position: relative;
 }
 
 footer p{
